@@ -110,3 +110,19 @@ form.addEventListener("submit", (e) => {
     alert("Veuillez acceptez les CGV");
   }
 });
+
+//--------------------------------------------------
+// Load Event
+window.addEventListener("load", () => {
+  console.log("Document chargé");
+});
+
+//---------------------------------------------------------
+// For Each
+const boxes = document.querySelectorAll(".box");
+
+boxes.forEach((box) => {
+  box.addEventListener("click", (e) => {
+    e.target.style.transform = "scale(0.7)";
+  });
+});
