@@ -52,3 +52,17 @@ response.addEventListener("mouseover", () => {
 });
 
 //-------------------------------------------------------------------
+// Key Press event
+
+const keypresssContainer = document.querySelector(".keypress");
+const key = document.getElementById("key");
+
+document.addEventListener("keypress", (e) => {
+  key.textContent = e.key;
+
+  if (e.key === "j") {
+    keypresssContainer.style.background = "red";
+  } else if (e.key === "h") {
+    keypresssContainer.style.background = "pink";
+  }
+});
