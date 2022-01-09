@@ -126,3 +126,21 @@ boxes.forEach((box) => {
     e.target.style.transform = "scale(0.7)";
   });
 });
+//---------------------------------------------------------
+// addEventListener VS onClick
+
+document.body.onclick = () => {
+  console.log("Click");
+};
+
+//Bubbling => fin (de base l'evelistener est paramétré en mode Bubbling)
+document.body.addEventListener('Click', () => {
+  console.log("click 1");
+}, false 
+);
+
+// Usecapture
+document.body.addEventListener('Click', () => {
+  console.log("click 2");
+}, true
+);
