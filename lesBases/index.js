@@ -144,3 +144,42 @@ document.body.addEventListener('Click', () => {
   console.log("click 2");
 }, true
 );
+
+//------------------------------------------------------------
+// Stop propagation
+
+//,questionContainer.addEventListener('click', (e) => {
+//  e.stopPropagation();
+//})
+
+//removeEventListener
+
+//--------------------------------------------------------------
+
+// BOM => browser object model
+
+//console.log(window.innerHeight); //=> hauteur de la fenetre
+//console.log(window.scrollY);
+
+//window.open('http://google.com', "cours js", "height=600, width=800");=> ouvrir une fentre
+//window.close()=> fermer une fenetre
+
+// Evénements addosées à window
+// alert("hello");
+
+// confirm
+btn2.addEventListener('click', () => {
+  confirm("voulez vous vraiment vous trompez?")
+});
+
+// prompt
+btn1.addEventListener('click', () => {
+  let answer = prompt('entrez votre nom !');
+
+  questionContainer.innerHTML = "<h3>Bravo" + answer + "</h3>";
+})
+
+// timeout compte à rebours
+setTimeout(() => {
+  questionContainer.style.borderRadius = "3000px";
+}, 2000) 
