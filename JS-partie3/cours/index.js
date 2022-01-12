@@ -80,4 +80,18 @@ for (i = 0; i < data.length; i++) {
 
 document.body.addEventListener("click", (e) => {
   console.log(e.target.id);
+
+  switch (e.target.id) {
+    case "javascript":
+      document.body.style.background = "yellow";
+      break;
+    case "PHP":
+      document.body.style.background = "violet";
+      break;
+    case "python":
+      document.body.style.background = "blue";
+      break;
+    default:
+      null;
+  }
 });
