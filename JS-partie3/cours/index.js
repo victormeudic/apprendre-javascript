@@ -162,15 +162,93 @@ arrayNumber.push("Coucou");
 //   .join("");
 
 // Méthodes pour les objets
-document.body.innerHTML = data
-  .map(
-    (user) =>
-      `
-  <div class="user-card>
-    <h2>${user.pseudo}</h2>
-    <p>Age :${user.age} ans</p>
-    <p>Status : ${user.admin ? "Moderateur" : "Membre"}</p>
-  </div>
-`
-  )
-  .join("");
+// document.body.innerHTML = data
+//   .map(
+//     (user) =>
+//       `
+//   <div class="user-card>
+//     <h2>${user.pseudo}</h2>
+//     <p>Age :${user.age} ans</p>
+//     <p>Status : ${user.admin ? "Moderateur" : "Membre"}</p>
+//   </div>
+// `
+//   )
+//   .join("");
+
+// Les dates
+
+// date classique
+let date = new Date();
+
+// Timestamp
+let timestamp = Date.parse(date);
+//console.log(timestamp);
+
+// Isostring
+let iso = date.toISOString();
+
+function dateParser(chaine) {
+  let newDate = new Date(chaine).toLocaleDateString("fr-FR", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+  });
+  return newDate;
+}
+
+// console.log(dateParser(date));
+// console.log(dateParser(timestamp));
+// console.log(dateParser(iso));
+
+// Destructuring
+
+let moreData = {
+  destVar: ["Element1", "Element2"],
+};
+
+const { destVar } = moreData;
+
+// console.log(moreData.destVar);
+// console.log(destVar);
+
+let array5 = [70, 80, 90];
+let [x, y, z] = array5;
+//console.log(x, y, z);
+
+const dateDest = (chaine) => {
+  let newDate = chaine.split("T")[0];
+  let [y, m, d] = newDate.split("-");
+  return [d, m, y].join("/");
+};
+//console.log(dateDest(iso));
+
+// Les Datasets
+
+const h3js = document.getElementById("javascript");
+//console.log(h3js.dataset.lang);
+const h3 = document.querySelectorAll("h3");
+// h3.forEach((language) => console.log(language.dataset.lang));
+
+// Les Regex
+
+let mail = "from-scratch@gmail.com";
+//console.log(mail.search(/));
+
+//console.log(mail.replace(/from/, "de"));
+
+// console.log(mail.match(/SCratch/i));
+// console.log(mail.match(/[zug]/));
+// console.log(mail.match(/[123]/));
+
+// Tous les chiffres
+//console.log(mail.match(/\d/));
+
+// Matcher toutes les lettres
+//console.log(mail.match(/[a-z]/));
+
+//console.log(mail.match(/^[\w_-]+@[\w-]+\.[a-z]{2,4}$/i));
+
+let separator = 245874564;
+//console.log(separator.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
