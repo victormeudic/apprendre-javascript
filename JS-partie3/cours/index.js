@@ -95,3 +95,82 @@ document.body.addEventListener("click", (e) => {
       null;
   }
 });
+
+// Méthodes Number
+
+let number2 = 42.1234;
+let numberString = "18.12 est un chiffre";
+
+// console.log(number2.toFixed(1));
+// console.log(parseInt("43"));
+// console.log(parseInt(numberString));
+// console.log(parseFloat(numberString));
+
+// Maths
+// console.log(Math.PI);
+// console.log(Math.round(4.5));
+// console.log(Math.floor(4.9));
+// console.log(Math.ceil(4.1));
+// console.log(Math.pow(2, 7));
+// console.log(Math.sqrt(81));
+
+//console.log(Math.floor(Math.random() * 50));
+
+// Méthode Arrays
+
+let array3 = ["Javascript", "Php", "Python"];
+let array4 = ["Ruby", "Solidity"];
+
+//let newArray = array3.concat(array4);
+// console.log(newArray);
+
+// let newArray = [...array3, ...array4];
+// console.log(newArray);
+
+//console.log(array3.join("-"));
+
+// console.log(array3.slice(1));
+//console.log(newArray.slice(2, 5));
+
+//console.log(array3.indexOf("Python"));
+
+//array3.forEach((languages) => console.log(languages));
+
+// console.log(array3.every((languages) => languages === "P"));
+// console.log(array3.some((languages) => languages === "Php"));
+
+// let shift = array3.shift();
+// console.log(array3.pop());
+
+// const restArray = array3.splice(1, 1, "C++");
+// console.log(array3);
+
+// IMPORTANT
+let arrayNumber = [4, 74, 28, 1];
+//console.log(arrayNumber.reduce((x, y) => x + y));
+arrayNumber.push("Coucou");
+//console.log(arrayNumber);
+
+// FILTER, SORT, MAP
+
+// console.log(arrayNumber.filter((number) => number > 10));
+// console.log(arrayNumber.sort());
+//console.log(arrayNumber.sort((a, b) => a - b));
+
+// document.body.innerHTML = arrayNumber
+//   .map((number) => `<li> ${number}</li>`)
+//   .join("");
+
+// Méthodes pour les objets
+document.body.innerHTML = data
+  .map(
+    (user) =>
+      `
+  <div class="user-card>
+    <h2>${user.pseudo}</h2>
+    <p>Age :${user.age} ans</p>
+    <p>Status : ${user.admin ? "Moderateur" : "Membre"}</p>
+  </div>
+`
+  )
+  .join("");
