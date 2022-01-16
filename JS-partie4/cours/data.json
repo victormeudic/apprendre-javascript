@@ -1,0 +1,11 @@
+{
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.editor.enablePreview": false,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "git.autofetch": true,
+  "window.zoomLevel": 1,
+  "explorer.confirmDragAndDrop": false,
+  "git.confirmSync": false
+}
