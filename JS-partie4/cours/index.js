@@ -39,7 +39,7 @@ const init = {
 // Asynchrone
 
 setTimeout(() => {
-  console.log("test");
+  //console.log("test");
 }, 2000);
 
 // Promise
@@ -57,3 +57,14 @@ const fetchData2 = async () => {
   // attend que le await soit exécuté avant de faire la suite
   executFonction();
 };
+
+// Le JSON
+
+// Méthode .json() => méthode qui s'auto résout en royant le Body de la requête
+
+fetch("data.json")
+  .then((res) => res.json())
+  .then((data) => {
+    let settings = JSON.stringify(data);
+    //console.log(JSON.parse(settings));
+  });
